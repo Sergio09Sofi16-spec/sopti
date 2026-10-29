@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>С чего начать | Как стать стримером</title>
+  <!-- Сюда вставь тот же <style> блок из index.html -->
+  <style>
+    :root { --primary: #9146ff; --primary-dark: #7b36d6; --bg: #12121f; --card-bg: #1e1e2e; --text: #ffffff; --muted: #a0a0b0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    nav { background: var(--card-bg); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
+    nav a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 500; }
+    nav a:hover { color: var(--primary); }
+    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+    h2 { margin: 2rem 0 1rem; color: var(--primary); }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+    th, td { padding: 1rem; border-bottom: 1px solid #333; text-align: left; }
+    th { background: #2a2a3a; }
+    .obs-steps { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; }
+    .obs-step { margin-bottom: 1rem; }
+    footer { text-align: center; padding: 2rem; border-top: 1px solid #333; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" style="font-weight:bold;">СтримСтарт</a>
+    <div>
+      <a href="start.html">С чего начать</a>
+      <a href="stream.html">Как вести стрим</a>
+      <a href="money.html">Монетизация</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>С чего начать: план для новичка</h1>
+
+    <section>
+      <h2>Выбор ниши и платформы</h2>
+      <p>Сначала определи, что ты хочешь транслировать: игры, творчество, IRL (реальная жизнь), обучение. От этого зависит выбор платформы:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Платформа</th>
+            <th>Аудитория</th>
+            <th>Особенности</th>
+            <th>Комиссия/правила</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Twitch</td>
+            <td>Геймеры, киберспорт, креатив</td>
+            <td>Живой чат, рейды, субтитры</td>
+            <td>Партнёрка, строгие правила контента</td>
+          </tr>
+          <tr>
+            <td>YouTube</td>
+            <td>Широкая аудитория, все категории</td>
+            <td>Видеоархив, рекомендации, суперчаты</td>
+            <td>Монетизация через AdSense, правила сообщества</td>
+          </tr>
+          <tr>
+            <td>VK Play</td>
+            <td>Ру-сегмент, игры и развлечения</td>
+            <td>Интеграция с VK, стримы и видео</td>
+            <td>Условия партнёрки и донаты внутри платформы</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Оборудование: минимальный и оптимальный набор</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Категория</th>
+            <th>Минимальный набор</th>
+            <th>Оптимальный набор</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Компьютер / консоль</td>
+            <td>ПК с процессором от i5 или игровая консоль</td>
+            <td>ПК с RTX 3060+ и 16 ГБ ОЗУ</td>
+          </tr>
+          <tr>
+            <td>Микрофон</td>
+            <td>USB-микрофон (например, Fifine K669)</td>
+            <td>Конденсаторный микрофон на пантографе (Audio-Technica ATR2100x)</td>
+          </tr>
+          <tr>
+            <td>Камера</td>
+            <td>Веб-камера 1080p (Logitech C922)</td>
+            <td>DSLR или беззеркальная камера (Sony ZV-E10) через карту захвата</td>
+          </tr>
+          <tr>
+            <td>Свет</td>
+            <td>Кольцевая лампа</td>
+            <td>Софтбокс + отражатель</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Настройка OBS Studio</h2>
+      <div class="obs-steps">
+        <div class="obs-step"><strong>1. Добавление сцены:</strong> нажми «+» в блоке «Сцены», назови «Основной стрим».</div>
+        <div class="obs-step"><strong>2. Источники:</strong> добавь «Захват игры» или «Захват экрана», затем «Устройство захвата видео» (камера).</div>
+        <div class="obs-step"><strong>3. Аудио:</strong> проверь, чтобы был выбран твой микрофон и отключены лишние звуки (например, системные уведомления).</div>
+        <div class="obs-step"><strong>4. Кодирование:</strong> для 1080p/60fps рекомендуй битрейт 4500–6000 kbps (CBR), кодек x264 или NVENC.</div>
+        <div class="obs-step"><strong>5. Тест:</strong> запусти тестовый стрим на приватный канал или запиши локально, проверь качество и задержки.</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2024 СтримСтарт
+  </footer>
+</body>
+</html>

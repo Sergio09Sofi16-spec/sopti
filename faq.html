@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ и чек-листы | Как стать стримером</title>
+  <style>
+    :root {
+      --primary: #9146ff;
+      --primary-dark: #7b36d6;
+      --bg: #12121f;
+      --card-bg: #1e1e2e;
+      --text: #ffffff;
+      --muted: #a0a0b0;
+      --accent-green: #4ade80;
+      --border: #333;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      background: var(--card-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--primary); }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    /* Аккордеон FAQ */
+    .accordion {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    .accordion-item { border-bottom: 1px solid var(--border); }
+    .accordion-header {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      background: transparent;
+      text-align: left;
+      color: var(--text);
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background 0.2s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accordion-header:hover { background: #2a2a3a; }
+    .accordion-icon { font-size: 1.2rem; color: var(--muted); transition: transform 0.3s; }
+    .accordion-item.active .accordion-icon { transform: rotate(180deg); color: var(--primary); }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      background: #252533;
+      color: var(--muted);
+      transition: max-height 0.3s ease, padding 0.3s;
+      padding: 0 1.5rem;
+    }
+    .accordion-content.open {
+      max-height: 500px; /* достаточно для коротких ответов */
+      padding: 1rem 1.5rem 1.5rem;
+    }
+
+    /* Чек-листы */
+    .checklist-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .checklist-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .checklist-title {
+      color: var(--accent-green);
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .simple-checklist { list-style: none; }
+    .simple-checklist li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 0.6rem;
+    }
+    .simple-checklist li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--accent-green);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" style="font-weight:bold;">СтримСтарт</a>
+    <div>
+      <a href="start.html">С чего начать</a>
+      <a href="stream.html">Как вести стрим</a>
+      <a href="money.html">Монетизация</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>FAQ и готовые чек-листы</h1>
+
+    <section>
+      <h2>Частые вопросы новичков</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Какой микрофон выбрать для старта?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <p>Для старта подойдёт USB-микрофон: Fifine K669, HyperX SoloCast или Maono AU-A04. Главное — не ставить его вплотную к губам и использовать поп-фильтр. Если есть бюджет — смотри в сторону Audio-Technica ATR2100x (он и USB, и XLR).</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Сколько часов нужно стримить, чтобы появились зрители?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <p>Нет жёсткой нормы. Важнее регулярность: 3–4 стрима в неделю по 2–4 часа лучше, чем один на 12 часов. Первые зрители приходят из рекомендаций платформы и репостов — делай анонсы в соцсетях перед эфиром.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Как не бояться камеры и говорить уверенно?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <p>Начни с «слепых» стримов: без камеры, только голос и игра. Потом добавь вебку, но не смотри на себя в оверлее. Представь, что говоришь другу. Первые 10–15 минут эфира — самые сложные, дальше становится легче.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Нужен ли мощный ПК для стриминга?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <p>Зависит от игры. Для инди и 2D хватит среднего ПК (i5 + RTX 3060). Для тяжёлых AAA-игр лучше отдельный кодировщик (NVENC на видеокарте) и запас по CPU. Если не уверен — тестируй OBS на низких настройках и смотри нагрузку.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Можно ли стримить с консоли (PS5/Xbox)?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <p>Да. На PS5 есть встроенный захват и прямой стрим на Twitch/YouTube. Для более гибких настроек (оверлеи, камера, сцены) нужна карта захвата и ПК с OBS. Xbox поддерживает стрим напрямую и через сторонние приложения.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Что делать, если на стриме почти нет зрителей?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <p>Не воспринимай это как провал. Общайся с теми, кто зашёл (даже если это 1–2 человека). Делай анонсы заранее, проси друзей зайти на первые минуты. Смотри аналитику: в какое время у тебя больше зрителей и какие стримы удерживают дольше.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Готовые чек-листы под разные задачи</h2>
+      <div class="checklist-group">
+        <div class="checklist-card">
+          <div class="checklist-title">Перед каждым стримом</div>
+          <ul class="simple-checklist">
+            <li>Проверь уровни микрофона и отсутствие фонового шума.</li>
+            <li>Убедись, что сцена в OBS собрана: игра, камера, оверлей, источники звука.</li>
+            <li>Протестируй битрейт и сеть (запусти тестовую запись или стрим).</li>
+            <li>Подготовь 3–5 тем для обсуждения или план активностей.</li>
+            <li>Опубликуй анонс в соцсетях и закрепи ссылку на стрим.</li>
+          </ul>
+        </div>
+        <div class="checklist-card">
+          <div class="checklist-title">После стрима</div>
+          <ul class="simple-checklist">
+            <li>Сохрани запись (если платформа не хранит вечно).</li>
+            <li>Вырежи лучшие моменты и сделай нарезку для соцсетей.</li>
+            <li>Ответь на комментарии и поблагодари зрителей в чате/соцсетях.</li>
+            <li>Запиши метрики: среднее число зрителей, пиковое, удержание.</li>
+            <li>Обнови описание канала и закрепи новый анонс.</li>
+          </ul>
+        </div>
+        <div class="checklist-card">
+          <div class="checklist-title">Для коллаборации</div>
+          <ul class="simple-checklist">
+            <li>Согласуй тему и формат: кто ведёт, кто отвечает за чат.</li>
+            <li>Сделай общий анонс и отметь друг друга в соцсетях.</li>
+            <li>Проверьте связь и задержку (ping) между вами.</li>
+            <li>Настройте сцены: как будете показывать двух спикеров (картинка-в-картинке, сплит-экран).</li>
+            <li>Заранее договоритесь, как реагировать на негатив в чате.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Частые ошибки новичков при оформлении канала</h2>
+      <p style="color:var(--muted); margin-bottom:1rem;">Эти мелочи могут отпугивать зрителей ещё до начала стрима.</p>
+      <div class="checklist-group">
+        <div class="checklist-card">
+          <div class="checklist-title">Описание канала</div>
+          <p>❌ Пустое или слишком длинное описание.  
+             ✅ Кратко: кто ты, что стримишь, когда эфиры, ссылки на соцсети.</p>
+        </div>
+        <div class="checklist-card">
+          <div class="checklist-title">Превью и аватар</div>
+          <p>❌ Размытые фото, слишком много текста на превью.  
+             ✅ Чёткое лицо/логотип, читаемый заголовок, контрастные цвета.</p>
+        </div>
+        <div class="checklist-card">
+          <div class="checklist-title">Панели и правила чата</div>
+          <p>❌ Нет правил или они скрыты.  
+             ✅ Добавь 3–5 простых правил: без спама, оскорблений, ссылок. Закрепи панель «Правила чата».</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2024 СтримСтарт. Все материалы созданы для образовательных целей.
+  </footer>
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+
+        // Закрыть все
+        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+
+        if (!isActive) {
+          item.classList.add('active');
+          header.nextElementSibling.classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

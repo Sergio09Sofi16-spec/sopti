@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Монетизация и рост | Как стать стримером</title>
+  <style>
+    :root {
+      --primary: #9146ff;
+      --primary-dark: #7b36d6;
+      --bg: #12121f;
+      --card-bg: #1e1e2e;
+      --text: #ffffff;
+      --muted: #a0a0b0;
+      --accent-green: #4ade80;
+      --accent-orange: #f97316;
+      --accent-blue: #3b82f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      background: var(--card-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--primary); }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 2rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
+    .price-tag {
+      color: var(--accent-green);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: #2a2a3a;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #444; }
+    th { background: #38384d; color: var(--muted); }
+    tr:last-child td { border-bottom: none; }
+    .calculator-block {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--accent-blue);
+    }
+    input, select {
+      background: #2a2a3a;
+      color: white;
+      border: 1px solid #444;
+      padding: 8px 12px;
+      border-radius: 6px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    button.calc-btn {
+      background: var(--accent-blue);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button.calc-btn:hover { background: #2563eb; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #333;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" style="font-weight:bold;">СтримСтарт</a>
+    <div>
+      <a href="start.html">С чего начать</a>
+      <a href="stream.html">Как вести стрим</a>
+      <a href="money.html">Монетизация</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Монетизация и рост: как зарабатывать на стримах</h1>
+
+    <section>
+      <h2>Основные модели дохода для стримера</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Донаты и подписки</h3>
+          <p>Зрители платят напрямую: донаты (разово) или подписки (ежемесячно). Инструменты: DonationAlerts, Boosty, встроенные подписки Twitch/YouTube.</p>
+          <p class="price-tag">Старт: от 0 ₽, порог выплат зависит от сервиса.</p>
+        </div>
+        <div class="card">
+          <h3>Партнёрские программы и реклама</h3>
+          <p>Комиссия за продажи по реферальным ссылкам (игры, железо, софт) или интеграция брендов. Подходит при стабильной аудитории.</p>
+          <p class="price-tag">Комиссия: 5–40% в зависимости от оффера.</p>
+        </div>
+        <div class="card">
+          <h3>Мерч и цифровые продукты</h3>
+          <p>Футболки, стикеры, гайды, пресеты OBS, оверлеи. Продаются через маркетплейсы или соцсети.</p>
+          <p class="price-tag">Себестоимость низкая, маржа высокая при тиражах.</p>
+        </div>
+        <div class="card">
+          <h3>Коллаборации и спонсорство</h3>
+          <p>Совместные стримы, упоминания, турниры. Чаще доступно при 100–300+ средних зрителей.</p>
+          <p class="price-tag">Цена договорная, зависит от охвата и вовлечённости.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Сравнение моделей монетизации по платформам</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Платформа</th>
+            <th>Подписки (комиссия)</th>
+            <th>Реклама / AdSense</th>
+            <th>Донаты</th>
+            <th>Партнёрка</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Twitch</td>
+            <td>50/50 или 70/30 (для партнёров)</td>
+            <td>Нет прямой рекламы</td>
+            <td>Сторонние сервисы</td>
+            <td>Доступна при выполнении условий</td>
+          </tr>
+          <tr>
+            <td>YouTube</td>
+            <td>Членство в канале (комиссия YouTube)</td>
+            <td>AdSense (монетизация видео)</td>
+            <td>Суперчат / Суперстикеры</td>
+            <td>Партнёрская программа YouTube</td>
+          </tr>
+          <tr>
+            <td>VK Play</td>
+            <td>Встроенная система донатов и подписок</td>
+            <td>Рекламные интеграции через VK</td>
+            <td>Прямые донаты внутри платформы</td>
+            <td>Условия партнёрки VK Play</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Калькулятор дохода (примерный)</h2>
+      <p>Оцени, сколько можно заработать при разных сценариях. Это ориентир, не гарантированный доход.</p>
+      <div class="calculator-block">
+        <label>Среднее число зрителей</label>
+        <input type="number" id="avgViewers" placeholder="Например: 50" min="1" />
+        <label>Процент платящих зрителей</label>
+        <input type="number" id="payingPercent" placeholder="Например: 3 (3%)" min="0.1" step="0.1" />
+        <label>Средний чек доната/подписки (₽)</label>
+        <input type="number" id="avgCheck" placeholder="Например: 250" />
+        <button class="calc-btn" onclick="calculateEarnings()">Посчитать примерный доход</button>
+        <p id="result" style="margin-top:1rem; font-weight:bold; color:var(--accent-green);"></p>
+      </div>
+      <script>
+        function calculateEarnings() {
+          const viewers = parseFloat(document.getElementById('avgViewers').value) || 0;
+          const percent = parseFloat(document.getElementById('payingPercent').value) || 0;
+          const check = parseFloat(document.getElementById('avgCheck').value) || 0;
+
+          if (viewers <= 0 || percent <= 0 || check <= 0) {
+            document.getElementById('result').textContent = 'Пожалуйста, заполните все поля.';
+            return;
+          }
+
+          const payingViewers = viewers * (percent / 100);
+          const dailyEarnings = payingViewers * check;
+          const monthlyEarnings = dailyEarnings * 30;
+
+          document.getElementById('result').textContent =
+            `Примерный доход: ${dailyEarnings.toFixed(0)} ₽/день или ${monthlyEarnings.toFixed(0)} ₽/месяц`;
+        }
+      </script>
+    </section>
+
+    <section>
+      <h2>Чек-лист запуска монетизации</h2>
+      <ul class="grid-3">
+        <li class="card"><strong>1. Подключи донаты</strong><br>DonationAlerts или Boosty. Добавь ссылку в описание канала и на панель.</li>
+        <li class="card"><strong>2. Настрой оповещения</strong><br>Визуальные и звуковые уведомления о донатах. Проверь, чтобы не перекрывали игру.</li>
+        <li class="card"><strong>3. Открой партнёрку</strong><br>Выполни минимальные требования платформы (часы стримов, среднее число зрителей).</li>
+        <li class="card"><strong>4. Добавь реферальные ссылки</strong><br>В описание стрима и в закреплённые посты соцсетей.</li>
+        <li class="card"><strong>5. Запусти мерч/цифровые товары</strong><br>Даже 1–2 позиции помогут протестировать спрос.</li>
+        <li class="card"><strong>6. Веди аналитику</strong><br>Считай конверсию (сколько зрителей платят) и средний чек. Это ключ к росту.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Как расти и увеличивать доход</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Контент-план</h3>
+          <p>Публикуй анонсы стримов заранее, делай нарезки лучших моментов и выкладывай в соцсети.</p>
+        </div>
+        <div class="card">
+          <h3>Коллабы</h3>
+          <p>Стримы с другими каналами увеличивают охват и доверие аудитории.</p>
+        </div>
+        <div class="card">
+          <h3>Аналитика</h3>
+          <p>Смотри метрики: среднее число зрителей, пиковое, удержание, CTR превью. Оптимизируй слабые места.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2024 СтримСтарт. Все материалы созданы для образовательных целей. Доход зависит от множества факторов и не гарантируется.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Как вести стрим | Советы и шаблоны</title>
+  <style>
+    :root {
+      --primary: #9146ff;
+      --primary-dark: #7b36d6;
+      --bg: #12121f;
+      --card-bg: #1e1e2e;
+      --text: #ffffff;
+      --muted: #a0a0b0;
+      --accent-green: #4ade80;
+      --accent-orange: #f97316;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      background: var(--card-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--primary); }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    .checklist {
+      list-style: none;
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .checklist li {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 30px;
+    }
+    .checklist .icon {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 1.1rem;
+    }
+    .chat-templates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .template-card {
+      background: #2a2a3a;
+      padding: 1.2rem;
+      border-radius: 6px;
+      border: 1px solid #333;
+    }
+    .template-type {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .errors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .error-item {
+      background: rgba(249, 115, 22, 0.08);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .format-card {
+      background: var(--card-bg);
+      padding: 1.2rem;
+      border-radius: 8px;
+    }
+    .format-title {
+      color: var(--accent-green);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #333;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" style="font-weight:bold;">СтримСтарт</a>
+    <div>
+      <a href="start.html">С чего начать</a>
+      <a href="stream.html">Как вести стрим</a>
+      <a href="money.html">Монетизация</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Как вести стрим: подача, чат и вовлечённость</h1>
+
+    <section>
+      <h2>Чек-лист перед каждым эфиром</h2>
+      <ul class="checklist">
+        <li class="checklist-item"><span class="icon">✅</span> Проверь уровень микрофона и отсутствие фонового шума (цель: пики не выше -6 dB, средний уровень -18…-12 dB).</li>
+        <li class="checklist-item"><span class="icon">✅</span> Убедись, что сцена в OBS собрана: игра/экран, камера, оверлей, источники звука.</li>
+        <li class="checklist-item"><span class="icon">✅</span> Протестируй битрейт и сеть: запусти тестовый стрим или локальную запись на 2–3 минуты.</li>
+        <li class="checklist-item"><span class="icon">✅</span> Подготовь 3–5 тем для обсуждения (если стрим спокойный) или план активностей (если игровой).</li>
+        <li class="checklist-item"><span class="icon">✅</span> Напиши анонс в соцсетях и закрепи ссылку на стрим в профиле.</li>
+        <li class="checklist-item"><span class="icon">✅</span> Держи рядом стакан воды и заметки с шаблонами ответов на частые вопросы.</li>
+        <li class="checklist-item"><span class="icon">✅</span> Проверь, что все донаты/оповещения подключены и не перекрывают важные элементы экрана.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Шаблоны ответов для чата</h2>
+      <p>Держи эти заготовки под рукой — они экономят время и делают общение дружелюбным.</p>
+      <div class="chat-templates">
+        <div class="template-card">
+          <div class="template-type">Приветствие</div>
+          <p>«Привет! Рад видеть! Расскажи, как день прошёл?»</p>
+        </div>
+        <div class="template-card">
+          <div class="template-type">Вопрос про перерыв</div>
+          <p>«Сейчас в важном моменте, но через 10–15 минут сделаю паузу и отвечу на всё подряд!»</p>
+        </div>
+        <div class="template-card">
+          <div class="template-type">Техническая проблема</div>
+          <p>«Вижу, картинка подлагивает — уже проверяю сеть. Спасибо за терпение!»</p>
+        </div>
+        <div class="template-card">
+          <div class="template-type">Спам/оффтоп</div>
+          <p>«Давайте вернёмся к теме стрима. Если вопрос не по делу — можно в личку. Спасибо!»</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Частые ошибки новичков и как их исправить</h2>
+      <div class="errors-grid">
+        <div class="error-item">
+          <h3>Говорит только про игру</h3>
+          <p>Зрители хотят видеть личность. Добавляй комментарии о своих мыслях, ошибках, забавных моментах.</p>
+        </div>
+        <div class="error-item">
+          <h3>Игнорирует чат</h3>
+          <p>Выделяй 1–2 минуты каждый час на ответы. Используй «читаю чат» как маркер для зрителей.</p>
+        </div>
+        <div class="error-item">
+          <h3>Слишком длинные эфиры без пауз</h3>
+          <p>Лучше 2–3 коротких стрима в неделю, чем один на 8 часов. Учитывай усталость голоса и внимания.</p>
+        </div>
+        <div class="error-item">
+          <h3>Не проверяет звук перед эфиром</h3>
+          <p>Всегда делай 2–3 тестовые фразы и смотри уровни в микшере OBS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Форматы стримов: что выбрать под твою нишу</h2>
+      <div class="formats-grid">
+        <div class="format-card">
+          <div class="format-title">Let’s Play / Прохождение</div>
+          <p>Идеально для одиночных игр. Делай акцент на эмоциях, реакциях и разборе механик.</p>
+        </div>
+        <div class="format-card">
+          <div class="format-title">Мультиплеер с общением</div>
+          <p>Кооператив или PvP. Здесь важна динамика и взаимодействие с командой/противниками.</p>
+        </div>
+        <div class="format-card">
+          <div class="format-title">IRL / Реальная жизнь</div>
+          <p>Прогулки, готовка, поездки. Фокус на атмосфере и рассказах, а не на действиях.</p>
+        </div>
+        <div class="format-card">
+          <div class="format-title">Обучение и разбор</div>
+          <p>Стримы-уроки: настройка софта, разбор механик, гайды. Хорошо работает с вопросами зрителей.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Как удерживать зрителей: простые приёмы</h2>
+      <ul class="checklist">
+        <li class="checklist-item"><span class="icon">💡</span> Начинай стрим с вопроса к чату: «Что сегодня интереснее — А или Б?»</li>
+        <li class="checklist-item"><span class="icon">💡</span> Раз в 15–20 минут делай «чек-ин»: «Как вам темп? Что хочется увидеть дальше?»</li>
+        <li class="checklist-item"><span class="icon">💡</span> Используй мини-челленджи: «Если будет 50 зрителей — сыграю этот уровень с закрытыми глазами».</li>
+        <li class="checklist-item"><span class="icon">💡</span> Заканчивай стрим на сильной ноте: «Завтра продолжим с этого места — не пропускайте!»</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2024 СтримСтарт. Все материалы созданы для образовательных целей.
+  </footer>
+</body>
+</html>

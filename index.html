@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Как стать стримером | Твой путь к эфиру</title>
+  <style>
+    :root {
+      --primary: #9146ff;
+      --primary-dark: #7b36d6;
+      --bg: #12121f;
+      --card-bg: #1e1e2e;
+      --text: #ffffff;
+      --muted: #a0a0b0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    nav { background: var(--card-bg); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
+    nav a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: var(--primary); }
+    .hero { padding: 4rem 1rem; text-align: center; max-width: 900px; margin: 0 auto; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; color: var(--muted); margin-bottom: 2rem; }
+    .btn { display: inline-block; background: var(--primary); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+    .btn:hover { background: var(--primary-dark); }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 3rem 1rem; max-width: 1000px; margin: 0 auto; }
+    .feature-card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary); }
+    .steps-section { padding: 3rem 1rem; max-width: 1000px; margin: 0 auto; text-align: center; }
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .step-item { background: #2a2a3a; padding: 1.5rem; border-radius: 8px; text-align: left; }
+    footer { text-align: center; padding: 2rem; border-top: 1px solid #333; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" style="font-weight:bold;">СтримСтарт</a>
+    <div>
+      <a href="start.html">С чего начать</a>
+      <a href="stream.html">Как вести стрим</a>
+      <a href="money.html">Монетизация</a>
+      <a href="faq.html">FAQ и чек-листы</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Как стать стримером</h1>
+    <p>Пошаговый план для новичков: от первого стрима до первых зрителей и доходов.</p>
+    <a href="start.html" class="btn">Начать с первого шага</a>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>🎯 Без воды</h3>
+      <p>Только практические советы и чек-листы, которые реально работают.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🛠️ Для любого бюджета</h3>
+      <p>Разборы оборудования: от минимального набора до продвинутого сетапа.</p>
+    </div>
+    <div class="feature-card">
+      <h3>💬 Поддержка чата</h3>
+      <p>Шаблоны ответов, работа с аудиторией и разбор частых ситуаций.</p>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <h2>Твой путь в стриминг</h2>
+    <div class="steps-grid">
+      <div class="step-item">
+        <h3>Шаг 1: Ниша и платформа</h3>
+        <p>Определи, что будешь стримить, и выбери площадку: Twitch, YouTube или VK Play.</p>
+      </div>
+      <div class="step-item">
+        <h3>Шаг 2: Оборудование и OBS</h3>
+        <p>Собери базовый набор и настрой OBS Studio для стабильного эфира.</p>
+      </div>
+      <div class="step-item">
+        <h3>Шаг 3: Первый стрим и рост</h3>
+        <p>Проведи тестовый эфир, собери обратную связь и начни привлекать зрителей.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 СтримСтарт. Все материалы созданы для образовательных целей.
+  </footer>
+</body>
+</html>
